@@ -9,11 +9,17 @@ Steps to run examples:
 - `cd babeltrace`
 - Get the Work In Progress for babeltrace 2.0 from the author working on mingw support
 - `git remote add mjeanson git@github.com:mjeanson/babeltrace.git`
+- `git fetch mjeanson`
 - `git checkout port-staging `
 -  Install dependencies listed in README, (for Windows, see below)
 - `./bootstrap`
 - `./configure --prefix=/scratch/tracecompass/babeltrace/babeltrace-port-staging`
 - `make`
+  - On Windows this failed for me in `CCLD babeltrace.exe` with errors like `undefined reference to 'libiconv'`, this is the workaround I used
+  - `cd cli`
+  - `make V=1 LIBS= babeltrace.exe`
+  - `cd ..`
+  - `make`
 - `make install`
 - `cd /scratch/tracecompass/git`
 - `git clone --this repo-- # if you haven't already`
@@ -22,6 +28,7 @@ Steps to run examples:
 - update BABELTRACE in Makefile to prefix passed to configure
 - `make # build the example`
 - `make run # runs creation of a simple CTF file in /tmp/xyz`
+  - On Windows the /tmp/xyz will be on the current drive, e.g. d:\tmp\xyz
 - Open the CTF in Tracecompass
 
 
@@ -33,7 +40,7 @@ To get a sane Windows development environment for CTF I recommend:
 - Get http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20161025.exe (or latest from http://www.msys2.org/) and install
 - Start MSYS2 MSYS (from installer or start menu)
 - `pacman -Syu # update core packages`
-- close shell, see instructions in shell
+- close shell if instructed to, see instructions in shell
 - start MSYS2 MSYS again (from start menu)
 - `pacman -Su # update remaining packages`
 - `pacman -S base-devel # choose all to get all normal dev tools`
