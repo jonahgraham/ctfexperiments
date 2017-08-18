@@ -8,9 +8,13 @@ Steps to run examples:
 - `git clone git@github.com:efficios/babeltrace.git `
 - `cd babeltrace`
 - Get the Work In Progress for babeltrace 2.0 from the author working on mingw support
-- `git remote add mjeanson git@github.com:mjeanson/babeltrace.git`
-- `git fetch mjeanson`
-- `git checkout port-staging `
+  - `git remote add mjeanson git@github.com:mjeanson/babeltrace.git`
+  - `git fetch mjeanson`
+  - `git checkout port-staging`
+  - As the this branch is a WIP, I have captured the version I used as https://github.com/jonahkichwacoders/ctfexperiements/tree/master/writer, to use it:
+  - `git remote add jonahkichwacoders git@github.com:jonahkichwacoders/ctfexperiements.git`
+  - `git fetch jonahkichwacoders`
+  - `git checkout ctfexperiements`
 -  Install dependencies listed in README, (for Windows, see below)
 - `./bootstrap`
 - `./configure --prefix=/scratch/tracecompass/babeltrace/babeltrace-port-staging`
