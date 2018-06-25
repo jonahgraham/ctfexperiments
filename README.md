@@ -11,9 +11,9 @@ Steps to run examples:
   - `git remote add mjeanson git@github.com:mjeanson/babeltrace.git`
   - `git fetch mjeanson`
   - `git checkout port-staging`
-  - As the this branch is a WIP, I have captured the version I used as https://github.com/jonahkichwacoders/ctfexperiements/tree/master/writer, to use it:
-  - `git remote add jonahkichwacoders git@github.com:jonahkichwacoders/ctfexperiements.git`
-  - `git fetch jonahkichwacoders`
+  - As the this branch is a WIP, I have captured the version I used as https://github.com/jonahgraham/babeltrace/tree/ctfexperiments, to use it:
+  - `git remote add jonahgraham git@github.com:jonahgraham/babeltrace.git`
+  - `git fetch jonahgraham`
   - `git checkout ctfexperiements`
 -  Install dependencies listed in README, (for Windows, see below)
 - `./bootstrap`
